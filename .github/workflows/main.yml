@@ -17,7 +17,7 @@ jobs:
     - name: Generate the sitemap
       uses: cicirello/generate-sitemap@v1
       with:
-        base-url-path: https://github.com/MySpace-2468/MySpace-2468.github.io/
+        base-url-path: https://MySpace-2468.github.io/
 
     - name: Commit and push
       run: |
