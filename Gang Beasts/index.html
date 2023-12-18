@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ragdoll Physics Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.65.1/dist/phaser.js"></script>
+</head>
+<body>
+
+<script>
+  const { Scene, Physics } = Phaser;
+
+  class MainScene extends Scene {
+    constructor() {
+      super({ key: 'MainScene' });
+    }
+
+    preload() {
+      this.load.image('bodyPart', 'path/to/bodyPart.png');
+    }
+
+    create() {
+      // Create a group to hold the ragdoll body parts
+      this.ragdollGroup = this.physics.add.group();
+
+      // Create ragdoll body parts
+      const torso = this.createBodyPart(300, 100, 'bodyPart');
+      const upperArm = this.createBodyPart(250, 100, 'bodyPart');
+      const lowerArm = this.createBodyPart(200, 100, 'bodyPart');
+
+      // Connect body parts with physics constraints (revolute joint)
+      this.physics.add.joint(torso, upperArm, 0, 0, 0, -20);
+      this.physics.add.joint(upperArm, lowerArm, 0, 0, 0, -20);
+
+      // Enable world bounds so body parts don't fall off the screen
+      this.physics.world.setBounds(0, 0, 800, 600);
+    }
+
+    createBodyPart(x, y, key) {
+      const bodyPart = this.ragdollGroup.create(x, y, key);
+      this.physics.add.existing(bodyPart, true);
+      return bodyPart;
+    }
+  }
+
+  const config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    physics: {
+      default: 'arcade',
+      arcade: {
+        debug: true,
+      },
+    },
+    scene: MainScene,
+  };
+
+  const game = new Phaser.Game(config);
+</script>
+
+</body>
+</html>
