@@ -1,4 +1,4 @@
-name: Deploy to assets.<USERNAME>.github.io
+name: Deploy to assets.myspace-2468.github.io
 
 on:
   push:
@@ -13,14 +13,14 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Deploy to assets.<USERNAME>.github.io
+    - name: Deploy to assets.myspace-2468.github.io
       run: |
         mkdir -p ./deploy
         cp -r ./../assets/. ./deploy/
         cd ./deploy
         git init
-        git config user.name "<YOUR_GITHUB_USERNAME>"
-        git config user.email "<YOUR_GITHUB_EMAIL>"
+        git config user.name "myspace-2468"
+        git config user.email "ire003@acc.edu.au"
         git add .
-        git commit -m "Deploy to assets.<USERNAME>.github.io"
-        git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/<USERNAME>/<USERNAME>.github.io.git" master:assets
+        git commit -m "Deploy to assets.myspace-2468.github.io"
+        git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/myspace-2468/myspace-2468.github.io.git" master:assets
