@@ -14,15 +14,14 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Deploy to assets.myspace-2468.github.io
-            run: |
-              mkdir -p ./deploy
-              cp -r ./assets/. ./deploy/
-              cd ./deploy
-              git init
-              git config user.name "myspace-2468"
-              git config user.email "ire003@acc.edu.au"
-              git add .
-              git commit -m "Deploy to assets.myspace-2468.github.io"
-              git remote add origin "https://${{ secrets.GITHUB_TOKEN }}@github.com/myspace-2468/myspace-2468.github.io.git"
-              git push --force --quiet origin main:assets
-
+      run: |
+        mkdir -p ./deploy
+        cp -r ./assets/. ./deploy/
+        cd ./deploy
+        git init
+        git config user.name "myspace-2468"
+        git config user.email "ire003@acc.edu.au"
+        git add .
+        git commit -m "Deploy to assets.myspace-2468.github.io"
+        git remote add origin "https://${{ secrets.GITHUB_TOKEN }}@github.com/myspace-2468/myspace-2468.github.io.git"
+        git push --force --quiet origin main:assets
