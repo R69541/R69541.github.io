@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://MySpace-2468.github.io/</loc>
-<lastmod>2023-11-08T10:47:47+11:00</lastmod>
+<lastmod>2024-08-12T09:52:53+10:00</lastmod>
+</url>
+<url>
+<loc>https://MySpace-2468.github.io/404.html</loc>
+<lastmod>2024-04-09T13:09:07+10:00</lastmod>
 </url>
 <url>
 <loc>https://MySpace-2468.github.io/VRExample.html</loc>
@@ -34,10 +38,22 @@
 </url>
 <url>
 <loc>https://MySpace-2468.github.io/images/</loc>
-<lastmod>2023-08-16T16:36:39+10:00</lastmod>
+<lastmod>2024-03-27T07:43:41+11:00</lastmod>
 </url>
 <url>
 <loc>https://MySpace-2468.github.io/sample/</loc>
 <lastmod>2023-11-07T09:45:58+11:00</lastmod>
+</url>
+<url>
+<loc>https://MySpace-2468.github.io/sample/textures/</loc>
+<lastmod>2024-03-27T10:20:08+11:00</lastmod>
+</url>
+<url>
+<loc>https://MySpace-2468.github.io/scratch/Getting_Over_It/</loc>
+<lastmod>2024-04-09T11:23:06+10:00</lastmod>
+</url>
+<url>
+<loc>https://MySpace-2468.github.io/sample/textures/skybox/</loc>
+<lastmod>2024-03-27T10:01:55+11:00</lastmod>
 </url>
 </urlset>
