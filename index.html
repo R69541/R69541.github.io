@@ -3,17 +3,31 @@
 <head>
 <title>My Space</title>
  <style>
+  @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+  
   :root {
-   color-scheme: dark light
+   --text: #000
+   --bg: lightblue
+   --links: yellow
   }
   
   a {
-   color: yellow;
+   color: var(links);
   }
+  
   body {
-   background-color: lightblue;
-   color: yellow;
+   background-color: var(bg);
+   color: var(text);
   }
+
+  @media (prefers-color-scheme: dark) {
+   :root {
+    --text: #fff
+    --bg: darkblue
+    --links: purple
+   }
+  }
+  
  </style>
 <link rel="icon" type="image/x-icon" href="/images/IMG_1421.png">
   <meta name="description" content="My Personal Online W3schools space">
