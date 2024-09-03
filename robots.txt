@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://myspace-2468.github.io/sitemap.xml
